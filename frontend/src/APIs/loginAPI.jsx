@@ -9,11 +9,13 @@ export const login = async ({ email, password }) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Accept": "*"
     },
     body: JSON.stringify({ email, password }),
   });
-  const data = await response.json();
+  
   if (response.ok) {
+    const data = await response.json();
     console.log(data);
     Cookies.set("token", data.token, { expires: threeHoursLater });
 

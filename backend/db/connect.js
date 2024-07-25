@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const connectionString = "mongodb://localhost:27017/recipeDB";
+const connectionString = "mongodb://localhost:27017/recipeDB1";
 
 const connect_db = async () => {
   await mongoose

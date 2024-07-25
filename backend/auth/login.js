@@ -24,7 +24,7 @@ const login = async(req, res) =>{
         }
 
         const token = jwt.sign({user: payload}, '1234', {expiresIn: '20h'})
-        res.status(200).send(token);
+        res.status(200).send({token});
 
     } catch (error) {
         console.log(error);
