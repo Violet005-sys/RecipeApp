@@ -1,0 +1,58 @@
+*{
+    font-family: var(--primary-font);
+    
+}
+
+.noto-sans {
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+:root{
+    --dark-color: #230E00;
+    --background-color: #E8D5C7;
+    --light-color: #CFCFCF;
+    --primary-font: 'Noto Sans Display', sans-serif;
+}
+
+
+.navbar{
+    
+    color: var(--dark-color);
+}
+
+.nav-link, .navbar-brand{
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.text-l{
+    color: var(--light-color);
+}
+
+.heroSection{
+    height: 100vh;
+    display: block;
+}
+
+#orderSection{
+    height: 60vh;
+    background-image: url('public/images/aboutUs.png');
+    background-size: cover; /* Optional: makes the image cover the entire background */
+    background-position: center; /* Optional: centers the image */
+    background-repeat: no-repeat; /* Optional: prevents the image from repeating */
+}
+
+.newsBtn{
+    background-color: transparent;
+    color: var(--dark-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    top: -250px;    
+    left: 75px;    
+}

@@ -1,23 +1,17 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useContext,useState } from "react";
 import DeleteRecipe from "./DeleteRecipe";
-import EditRecipe from "./EditRecipe";
 import MyRecipesContext from "../context/MyRecipesContext";
 import SearchBar from "../Components/SearchBar";
+import { Link } from "react-router-dom";
 
 
 const Recipes = () => {
   const { recipes } = useContext(MyRecipesContext);
   console.log(recipes);
-  const [selectedRecipeId, setSelectedRecipeId] = useState(null);
-  const [selectedRecipeTitle, setSelectedRecipeTitle] = useState(null);
-  const [selectedRecipeIngredients, setSelectedRecipeIngredients] = useState(null);
+  
 
-  const handleRecipeSelection = (id, title, ingredients) => {
-    setSelectedRecipeId(id);
-    setSelectedRecipeTitle(title);
-    setSelectedRecipeIngredients(ingredients);
-  }
+  
     // Helper function to convert a string to title case
   const toTitleCase = (str) => {
     return str
@@ -38,8 +32,6 @@ const Recipes = () => {
   return (
     <div className="container mt-4">
       <SearchBar />
-      {/**/}
-      <EditRecipe id={selectedRecipeId} title={selectedRecipeTitle} ingredients={selectedRecipeIngredients}/>
       
       <div className="row">
         {recipes.map((recipe) => {
@@ -47,6 +39,7 @@ const Recipes = () => {
             <>
             
             <div className="col-lg-3 m-4" key={recipe._id}>
+             
               <div className="card">
                 <img
                   src={recipe.image}
@@ -66,7 +59,7 @@ const Recipes = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#editRecipeModal"
                       onClick={() => {
-                        handleRecipeSelection(recipe._id, recipe.title, recipe.ingredients);
+                        
                         
                       }}
                     >
@@ -75,8 +68,11 @@ const Recipes = () => {
                   </div>
                 </div>
               </div>
+            
             </div>
+           
             </>
+            
           );
         })}
       </div>

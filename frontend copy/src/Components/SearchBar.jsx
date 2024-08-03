@@ -19,8 +19,7 @@ const SearchBar = () => {
     }
   };
   return (
-    <div className="row mb-4">
-      <div className="col-md-2"></div>
+    <div className="row m-4">
       <div className="col-lg-6 offset-lg-3">
         <form className="form-inline" onSubmit={handleSearch}>
           <input
@@ -34,7 +33,6 @@ const SearchBar = () => {
           <input type="submit" hidden />
         </form>
       </div>
-      <div className="col-md-2"></div>
     </div>
   );
 };

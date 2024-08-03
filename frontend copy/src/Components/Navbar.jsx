@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Cookies from 'js-cookie'
-import  '../cssFiles/Wrapper.css';
 
 
 const Navbar = () => {
@@ -10,8 +9,8 @@ const Navbar = () => {
     window.location.reload();
   };
   return (
-    <nav className="navbar navbar-expand-lg navabr-dark">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div className="container">
         <a className="navbar-brand" href="/">
           Recipe App
         </a>
@@ -23,8 +22,8 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/auth">
-                Account
+              <a className="nav-link" href="#">
+                Contact Us
               </a>
             </li>
             <li className="nav-item">
